@@ -1,0 +1,146 @@
+*********
+*Task 3:*
+*********
+1) For the given JASON iterate over all for loops(for,for in)
+
+Example [For Loop]:
+*******************
+var emp={
+"name":"Rajan",
+"age":"45",
+"dept":"Payment",
+"address":"12, Big st",
+"mobile":"1234567899",
+"email":"sample@vmail.com",
+"work_days":['MON','TUE','WED','THU','FRI']
+};
+//to print work_days of the employee
+for(var i=0;i<emp.work_days.length;i++)
+{
+    console.log(emp.work_days[i]);
+}
+Example [For In]:
+*******************
+var emp={
+"name":"Rajan",
+"age":"45",
+"dept":"Payment",
+"address":"12, Big st",
+"mobile":"1234567899",
+"email":"sample@vmail.com"
+"work_days":"'MON','TUE','WED','THU','FRI'"
+};
+
+//to print all details of employee
+for(var i in emp)
+{
+    console.log(i,' = '+emp[i]);
+}
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+2)Create your own resume data in JSON format
+//My resume in JASON format
+var Resume={
+  "res_head": {
+    "name": "Indu R",
+    "email": "indutnj@gmail.com",
+    "phone": "9843506442"
+     },
+    "summary": {
+    "summary": "Driven professional with an experience of over 8 years in Banking Sector (Computer Systems Department- Data & Development),Indepth knowledge of Data Extraction & Analysis,exposure to technical as well as functional operations of the Bank."
+     },
+     
+  "Work_Experence": [
+    {
+      "company": "City Union Bank",
+      "department": "Computer Systems Department",
+      "role": "Web Developer",
+      "position": "Senior Banking Officer",
+      "startDate": "27-10-2014",
+      "endDate": "23-12-2022",
+     
+      "highlights": [
+        "Develop Web pages with simplified user interface.",
+        "Develop user interface with JavaScript, Bootstrap, HML, CSS which improved user satisfactory.",
+        "Develop web applications using PHP and Classic ASP.",
+        "Gathering requirement directly from the departments.",
+        "Developed more than 300 Projects.",
+        "Developing periodical reports for applications with download option.",
+        "Inspection Department-AML Alert Generation Menu for Branch Communication purpose, MMC, Jewel Loan Inspection     Application, Surprise cash verification Application, Wrong Credit Menu, Gold Bond Application.",
+        "Vigilance Department-Employee Transaction Alert Generation for employee communication, Fraud Identification and Management Application",
+        "Card Division- Green PIN generation menu for Debit Cards,International Card Enable/Disable, Card Block Menu, Debit Card Apply Menu for New, Duplicate, Add-on cards.",
+        "Credit Monitoring Department-Collateral Management Application, CMD Account Opening Request Application.",
+        "CRMD/LEGAL- SARFAESI 132 Notice creation, Advocate Data,etc.,",
+        "HRMD- Employee Profile Application and Transfer Request Application, Staff Training Application, Employee Placement         Register, Confidential Report Module, Confidential Opinion Application, Medical Claim Application, etc.,",
+        "Fees Payment Application-Fees payment Applications developed for many schools and colleges such as PSBB,        Saveetha University, etc., Payment gateway integration."
+      ]
+    }
+  ],
+  "Education_SSLC": [
+    {
+      "year":"2007",
+      "institute":"SSPGHS School-TNBHSE",
+      "marks":"83.60%"
+    }
+    ],
+     "Education_HSC": [
+    {
+      "year":"2009",
+      "institute":"SSPGHS School-TNBHSE",
+      "marks":"70.58%"
+    }
+    ],
+     "Education_bca": [
+    {      
+      "year":"2012",
+      "institute":"SASTRA University",
+      "marks":"73.00%"
+    }
+    ],
+     "Education_mca": [
+    {
+      "year":"2014",
+      "institute":"SASTRA University",
+      "marks":"76.00%"
+    }
+    ],
+     "Education_dig_bank": [
+    {
+      "year":"2022",
+      "institute":"Indian Institute of Banking & Finance (IIBF)",
+      "marks":"pass"
+    }
+      
+  ],
+  "work_ethics": ["Self Learner","Accountability","Problem Solving","Team Player","Leadership Adaptability","Time management","Positive Attitude","Quick Learner"],
+  
+  "skills": ["SQL Server","PL/SQL Developer","Classic ASP","PHP","Javascript","VB Script","CSS","HTML"]
+}
+console.log(Resume);
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+3)Read about the difference between window, screen, and document in Javascript
+
+Window object
+-------------
+*	Window object and Document object often look alike and confusing ??
+A clear understanding of Browser Object Model (BOM) and Document Object Model(DOM) resolves the problem.
+*	Browser Object Model (BOM), The Browser Object Model contains objects that represent the current browser window or tab. The topmost object in the BOM is the window object representing the window or tab or an iframe sometimes. Window object has properties like browser history, location and the device’s screen etc. In case of multi tab browser, a window object represents a single tab, but some of its properties like innerHeight, innerWidth and methods like resizeTo() will affect the whole browser window.
+
+Document Object Model
+---------------------
+*	When a web page is loaded, the browser creates a Document Object Model of the page. The document object represents the whole html document as a tree of Objects(HTML, HEAD, BODY, and other HTML tags). It is the root element that represents the html document.
+
+*	Document object : Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of the page. Using document object, JavaScript can modify, add and delete the HTML elements, attributes CSS styles in the page
+*	The window object represents a window/tab containing a DOM document where as document object is property of window object that points to the DOM document loaded in that window.
+*	You can access a document object either using window.document property or using document object directly as window is global object. In the below example, title is the property of document object.
+
+*	The other major difference is that both window object and document object have properties and methods. Few method names are same in both objects but with different behavior. In the below example window.open() opens a new tab or window and document.open() creates a blank document within the window.
+
+Screen
+------
+*	Screen is the window property that holds information of browser screen. It refers to screen object associated with that window object. Used to display screen width, height, colorDepth, pixelDepth etc
+*	Similar to document screen can be accessed either by window.screen or screen object directly. Screen object doesn't have any methods as in window and document objects.
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
